@@ -35,6 +35,9 @@
       }],
       ["@semantic-release/github", {
         "assets": "dist/*.tgz"
+      }],
+      ["@semantic-release/git", {
+        "assets": ["package.json"]
       }]
     ]
   },
