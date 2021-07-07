@@ -31,11 +31,14 @@
       [
         "@semantic-release/commit-analyzer",
         {
-          "preset": "ESLint",
           "releaseRules": [
             {
               "type": "refactor",
               "scope": "core-*",
+              "release": "minor"
+            },
+            {
+              "type": "feat",
               "release": "minor"
             }
           ]
