@@ -51,7 +51,7 @@
       [
         "@semantic-release/npm",
         {
-          "pkgRoot": "dist/**.*",
+          "pkgRoot": "dist",
           "files": [
             "dist/**.*"
           ],
