@@ -52,6 +52,9 @@
         "@semantic-release/npm",
         {
           "pkgRoot": "dist",
+          "files": [
+            "dist/**.*"
+          ],
           "tarballDir": "dist"
         }
       ],
