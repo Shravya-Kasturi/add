@@ -27,6 +27,9 @@
     "debug": true,
     "repositoryUrl": "git://github.com/shravya-kasturi/add.git",
     "pkgRoot": "dist",
+    "files": [
+      "dist/**.*"
+    ],
     "plugins": [
       [
         "@semantic-release/commit-analyzer",
@@ -52,18 +55,8 @@
           "tarballDir": "dist"
         }
       ],
-      [
         "@semantic-release/github",
-        {
-          "assets": ["dist"]
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": ["dist/**/*", "package.json"]
-        }
-      ]
+        "@semantic-release/git"
     ]
   },
   "repository": {
