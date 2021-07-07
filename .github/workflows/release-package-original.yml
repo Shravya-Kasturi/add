@@ -1,11 +1,11 @@
 name: Node.js Package
 
 on:
-  # push:
-      # branches:
-      #   - feature/**
-  release:
-    types: [created]
+  push:
+    branches:
+      - feature/**
+  # release:
+  #   types: [created]
 
 jobs:
   build:

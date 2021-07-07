@@ -17,7 +17,7 @@
   "release": {
     "getLastRelease": "last-release-git",
     "branches": [
-      "master",
+      "main",
       "next",
       "feature/**"
     ],
