@@ -49,6 +49,7 @@
         "@semantic-release/npm",
         {
           "pkgRoot": "dist",
+          "npmPublish": false,
           "tarballDir": "dist"
         }
       ],
@@ -61,9 +62,7 @@
       [
         "@semantic-release/git",
         {
-          "assets": [
-            "package.json"
-          ]
+          "assets": ["dist/**/*", "package.json"]
         }
       ]
     ]
