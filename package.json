@@ -28,7 +28,12 @@
     "repositoryUrl": "git://github.com/shravya-kasturi/add.git",
     "pkgRoot": "dist",
     "plugins": [
-      "@semantic-release/commit-analyzer",
+      ["@semantic-release/commit-analyzer",{
+        "preset": "ESLint",
+        "releaseRules": [
+          {"type": "refactor", "scope": "core-*", "release": "minor"}
+        ]
+      }],
       "@semantic-release/release-notes-generator",
       [
         "@semantic-release/npm",
