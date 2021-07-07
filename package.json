@@ -12,6 +12,8 @@
     "semantic-release": "semantic-release"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "tag": "latest",
     "@shravya-kasturi:registry": "https://npm.pkg.github.com"
   },
   "release": {
@@ -22,7 +24,19 @@
       "feature/**"
     ],
     "debug": true,
-    "repositoryUrl": "git://github.com/shravya-kasturi/add.git"
+    "repositoryUrl": "git://github.com/shravya-kasturi/add.git",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      ["@semantic-release/npm", {
+        "pkgRoot": "dist",
+        "npmPublish": false,
+        "tarballDir": "dist"
+      }],
+      ["@semantic-release/github", {
+        "assets": "dist/*.tgz"
+      }]
+    ]
   },
   "repository": {
     "type": "git",
