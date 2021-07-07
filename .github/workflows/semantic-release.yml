@@ -18,6 +18,8 @@ jobs:
         run: npm ci
       - name: Build dist
         run: npm run build
+      - name: Post Build
+        run: npm run postbuild
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

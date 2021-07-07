@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rm -rf dist && tsc && rollup -c rollup.config.js",
     "test": "jest",
+    "postbuild": "cp package.json dist",
     "semantic-release": "semantic-release"
   },
   "publishConfig": {
@@ -25,6 +26,7 @@
     ],
     "debug": true,
     "repositoryUrl": "git://github.com/shravya-kasturi/add.git",
+    "pkgRoot": "dist",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
