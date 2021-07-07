@@ -2,7 +2,7 @@
   "name": "@shravya-kasturi/add",
   "version": "1.0.0",
   "description": "Simple add package to add two numbers. Very helpful",
-  "main": "dist/index.js",
+  "main": "index.js",
   "files": [
     "dist/**.*"
   ],
@@ -49,7 +49,6 @@
         "@semantic-release/npm",
         {
           "pkgRoot": "dist",
-          "npmPublish": false,
           "tarballDir": "dist"
         }
       ],
