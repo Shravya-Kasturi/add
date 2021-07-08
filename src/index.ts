@@ -1,7 +1,4 @@
-function add(x: number, y: number): number {
-  console.log('this is new npm package working nicely. Please publish!!!');
+import { minus } from './functions/minus';
+import { add } from './functions/add';
 
-  return x + y;
-}
-
-export { add };
+export { add, minus };

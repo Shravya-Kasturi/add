@@ -12,7 +12,7 @@
     "postbuild": "cp package.json output",
     "semantic-release": "semantic-release",
     "check-format": "prettier --config .prettierrc '.' --check",
-    "lint": "eslint src/**",
+    "lint": "eslint src/**/**",
     "format": "prettier --config .prettierrc '.' --write"
   },
   "publishConfig": {
