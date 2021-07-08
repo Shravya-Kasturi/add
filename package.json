@@ -10,7 +10,9 @@
     "build": "rm -rf output && tsc && rollup -c rollup.config.js",
     "test": "jest",
     "postbuild": "cp package.json output",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint": "eslint . --ext .ts"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
@@ -36,6 +38,10 @@
         {
           "releaseRules": [
             {
+              "type": "breaking",
+              "release": "major"
+            },
+            {
               "type": "refactor",
               "scope": "core-*",
               "release": "minor"
@@ -43,6 +49,14 @@
             {
               "type": "feat",
               "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "perf",
+              "release": "patch"
             }
           ]
         }
@@ -58,8 +72,8 @@
           "tarballDir": "output"
         }
       ],
-        "@semantic-release/github",
-        "@semantic-release/git"
+      "@semantic-release/github",
+      "@semantic-release/git"
     ]
   },
   "repository": {
@@ -78,6 +92,7 @@
     "@types/jest": "^26.0.24",
     "conventional-changelog-eslint": "^3.0.9",
     "eslint": "^7.29.0",
+    "husky": "^7.0.1",
     "jest": "^27.0.6",
     "last-release-git": "0.0.3",
     "prettier": "2.3.2",
@@ -88,5 +103,12 @@
     "semantic-release": "^17.4.4",
     "ts-jest": "^27.0.3",
     "typescript": "^3.9.10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && npm run test",
+      "pre-push": "",
+      "...": "..."
+    }
   }
 }
