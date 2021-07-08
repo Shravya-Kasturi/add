@@ -2,7 +2,7 @@
   "name": "@shravya-kasturi/add",
   "version": "1.0.0",
   "description": "Simple add package to add two numbers. Very helpful",
-  "main": "index.js",
+  "main": "dist/index.js",
   "files": [
     "dist/**.*"
   ],
