@@ -7,9 +7,9 @@
     "dist/**.*"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc && rollup -c rollup.config.js",
+    "build": "rm -rf output && tsc && rollup -c rollup.config.js",
     "test": "jest",
-    "postbuild": "cp package.json dist",
+    "postbuild": "cp package.json output/dist",
     "semantic-release": "semantic-release"
   },
   "publishConfig": {
@@ -26,7 +26,7 @@
     ],
     "debug": true,
     "repositoryUrl": "git://github.com/shravya-kasturi/add.git",
-    "pkgRoot": "dist",
+    "pkgRoot": "output",
     "files": [
       "dist/**.*"
     ],
@@ -51,11 +51,11 @@
       [
         "@semantic-release/npm",
         {
-          "pkgRoot": "dist",
+          "pkgRoot": "output",
           "files": [
             "dist/**.*"
           ],
-          "tarballDir": "dist"
+          "tarballDir": "output"
         }
       ],
         "@semantic-release/github",
