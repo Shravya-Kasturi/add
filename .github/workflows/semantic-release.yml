@@ -4,6 +4,28 @@ on:
     branches:
       - main
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install Packages
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run Format Checking
+        run: npm run check-format
+
+      - name: Test
+        run: npm run test
+
+      - name: Build
+        run: npm run build
+
   release:
     name: Release
     runs-on: ubuntu-18.04
@@ -23,6 +45,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release
