@@ -12,7 +12,7 @@
     "postbuild": "cp package.json output",
     "semantic-release": "semantic-release",
     "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "lint": "eslint ."
+    "lint": "eslint"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
@@ -85,6 +85,8 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-angular": "^12.1.4",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@semantic-release/commit-analyzer": "^8.0.1",
@@ -108,9 +110,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run test",
-      "pre-push": "",
-      "...": "..."
+      "pre-commit": "npm run format && npm run lint",
+      "pre-push": "npm run test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }

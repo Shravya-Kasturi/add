@@ -11,7 +11,7 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "ignorePatterns": ["node_modules", "output", "*.spec.ts"],
+    "ignorePatterns": ["node_modules", "output", "*.spec.ts", "*.config.js"],
     "plugins": [
         "@typescript-eslint"
     ],
