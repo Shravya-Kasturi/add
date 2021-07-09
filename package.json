@@ -7,7 +7,7 @@
     "build": "rm -rf dist && tsc && rollup -c rollup.config.js",
     "test": "jest",
     "postbuild": "cp package.json dist",
-    "semantic-release": "semantic-release",
+    "release": "semantic-release",
     "check-format": "prettier --config .prettierrc '.' --check",
     "lint": "eslint src/**/**",
     "format": "prettier --config .prettierrc '.' --write"
