@@ -15,7 +15,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "tag": "latest",
-    "access":"public",
+    "access": "public",
     "@shravya-kasturi:registry": "https://npm.pkg.github.com"
   },
   "author": "Shravya Kasturi",
