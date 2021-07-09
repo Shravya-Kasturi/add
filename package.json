@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Simple add package to add two numbers. Very helpful",
   "main": "index.js",
-  "files": [
-    "dist/**.*"
-  ],
   "scripts": {
     "build": "rm -rf output && tsc && rollup -c rollup.config.js",
     "test": "jest",
@@ -68,11 +65,6 @@
       "@semantic-release/github",
       "@semantic-release/git"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com/shravya-kasturi/add.git",
-    "directory": "dist"
   },
   "author": "",
   "license": "ISC",
