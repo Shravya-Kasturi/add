@@ -15,6 +15,11 @@
     "lint": "eslint src/**/**",
     "format": "prettier --config .prettierrc '.' --write"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "tag": "latest",
+    "@shravya-kasturi:registry": "https://npm.pkg.github.com"
+  },
   "release": {
     "getLastRelease": "last-release-git",
     "branches": [
