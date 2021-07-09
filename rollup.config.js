@@ -7,12 +7,12 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: 'output/dist/index.js',
+      file: 'dist/index.js',
       format: 'cjs',
       sourcemap: true
     },
     {
-      file: 'output/dist/index.es.js',
+      file: 'dist/index.es.js',
       format: 'es',
       sourcemap: true
     }

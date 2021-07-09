@@ -8,7 +8,7 @@
     "strict": true,
     "sourceMap": true,
     "declaration": true,
-    "outDir": "output/dist",
+    "outDir": "dist",
     "downlevelIteration": true,
     "esModuleInterop": true
   },

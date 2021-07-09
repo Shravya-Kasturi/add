@@ -2,23 +2,18 @@
   "name": "@shravya-kasturi/add",
   "version": "1.0.0",
   "description": "Simple add package to add two numbers. Very helpful",
-  "main": "dist/index.js",
+  "main": "index.js",
   "files": [
     "dist/**.*"
   ],
   "scripts": {
     "build": "rm -rf output && tsc && rollup -c rollup.config.js",
     "test": "jest",
-    "postbuild": "cp package.json output",
+    "postbuild": "cp package.json dist",
     "semantic-release": "semantic-release",
     "check-format": "prettier --config .prettierrc '.' --check",
     "lint": "eslint src/**/**",
     "format": "prettier --config .prettierrc '.' --write"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "tag": "latest",
-    "@shravya-kasturi:registry": "https://npm.pkg.github.com"
   },
   "release": {
     "getLastRelease": "last-release-git",
@@ -27,10 +22,7 @@
     ],
     "debug": true,
     "repositoryUrl": "git://github.com/shravya-kasturi/add.git",
-    "pkgRoot": "output",
-    "files": [
-      "dist/**.*"
-    ],
+    "pkgRoot": "dist",
     "plugins": [
       [
         "@semantic-release/commit-analyzer",
@@ -64,11 +56,8 @@
       [
         "@semantic-release/npm",
         {
-          "pkgRoot": "output",
-          "files": [
-            "dist/**.*"
-          ],
-          "tarballDir": "output"
+          "pkgRoot": "dist",
+          "tarballDir": "dist"
         }
       ],
       "@semantic-release/github",

@@ -1,5 +1,5 @@
-import { minus } from './functions/minus';
-import { add } from './functions/add';
-import { multiply } from './functions/multiply';
+import { minus } from './main/minus';
+import { add } from './main/add';
+import { multiply } from './main/multiply';
 
 export { add, minus, multiply };
