@@ -4,7 +4,7 @@
   "description": "Simple add package to add two numbers. Very helpful",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf output && tsc && rollup -c rollup.config.js",
+    "build": "rm -rf dist && tsc && rollup -c rollup.config.js",
     "test": "jest",
     "postbuild": "cp package.json dist",
     "semantic-release": "semantic-release",
@@ -17,61 +17,12 @@
     "tag": "latest",
     "@shravya-kasturi:registry": "https://npm.pkg.github.com"
   },
-  "release": {
-    "getLastRelease": "last-release-git",
-    "branches": [
-      "main"
-    ],
-    "debug": true,
-    "repositoryUrl": "git://github.com/shravya-kasturi/add.git",
-    "pkgRoot": "dist",
-    "plugins": [
-      [
-        "@semantic-release/commit-analyzer",
-        {
-          "releaseRules": [
-            {
-              "type": "breaking",
-              "release": "major"
-            },
-            {
-              "type": "refactor",
-              "scope": "core-*",
-              "release": "minor"
-            },
-            {
-              "type": "feat",
-              "release": "minor"
-            },
-            {
-              "type": "fix",
-              "release": "patch"
-            },
-            {
-              "type": "perf",
-              "release": "patch"
-            }
-          ]
-        }
-      ],
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "dist",
-          "tarballDir": "dist"
-        }
-      ],
-      "@semantic-release/github",
-      "@semantic-release/git"
-    ]
-  },
-  "author": "",
+  "author": "Shravya Kasturi",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-angular": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@semantic-release/commit-analyzer": "^8.0.1",

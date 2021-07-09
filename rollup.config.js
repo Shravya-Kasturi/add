@@ -9,13 +9,8 @@ export default {
     {
       file: 'dist/index.js',
       format: 'cjs',
-      sourcemap: true
-    },
-    {
-      file: 'dist/index.es.js',
-      format: 'es',
-      sourcemap: true
+      sourcemap: false
     }
   ],
-  plugins: [typescript({ tsconfig: 'tsconfig.build.json' }), terser(), commonjs(), nodeResolve({ browser: true })]
+  plugins: [typescript({ tsconfig: 'tsconfig.build.json' }), terser(), commonjs(), nodeResolve({ browser: false })]
 };
