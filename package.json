@@ -23,9 +23,7 @@
   "release": {
     "getLastRelease": "last-release-git",
     "branches": [
-      "main",
-      "next",
-      "feature/**"
+      "main"
     ],
     "debug": true,
     "repositoryUrl": "git://github.com/shravya-kasturi/add.git",
