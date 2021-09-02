@@ -35,19 +35,13 @@
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "angular",
+        "preset": "eslint",
         "parserOpts": {
           "noteKeywords": ["breaking", "refactor", "feat", "fix", "perf"]
         },
         "writerOpts": {
           "commitsSort": ["subject", "scope"]
         }
-      }
-    ],
-    [
-      "@semantic-release/changelog",
-      {
-        "changelogFile": "CHANGELOG.md"
       }
     ],
     [
