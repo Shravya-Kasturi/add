@@ -15,8 +15,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "tag": "latest",
-    "access": "public",
-    "@shravya-kasturi:registry": "https://registry.npmjs.org"
+    "access": "public"
   },
   "author": "Shravya Kasturi",
   "license": "ISC",
