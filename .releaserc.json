@@ -33,7 +33,17 @@
         ]
       }
     ],
-    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/release-notes-generator",{
+      "preset": "angular",
+      "parserOpts": {
+        "noteKeywords": ["breaking", "refactor", "feat", "fix", "perf"]
+      },
+      "writerOpts": {
+        "commitsSort": ["subject", "scope"]
+      }
+      }
+    ],
     [
       "@semantic-release/npm",
       {
