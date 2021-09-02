@@ -35,7 +35,7 @@
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "eslint",
+        "preset": "angular",
         "parserOpts": {
           "noteKeywords": ["breaking", "refactor", "feat", "fix", "perf"]
         },
