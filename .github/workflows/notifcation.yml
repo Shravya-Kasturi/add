@@ -1,0 +1,30 @@
+name: Notification
+
+on:
+  workflow_run:
+    workflows: [Release, Checks]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install Packages
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run Format Checking
+        run: npm run check-format
+
+      - name: Test
+        run: npm run test
+
+      - name: Build
+        run: npm run build
